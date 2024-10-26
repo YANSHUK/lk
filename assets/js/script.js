@@ -24,19 +24,20 @@ $(document).ready(function () {
             form = $('.login-form');
         }
 
-      //  form.find('.input-form').removeClass('error');
+        form.find('.input-form').removeClass('error');
 
-      //  let isValid = true;
-      //  form.find('.input-form[required]').each(function () {
-      //      if (!$(this).val()) {
-      //          $(this).addClass('error');
-      //          isValid = false;
-      //      }
-      //  });
+        let isValid = true;
+        form.find('.input-form[required]').each(function () {
+            if (!$(this).val()) {
+                $(this).addClass('error');
+                isValid = false;
+            }
+        });
 
-      //  if (!isValid) {
-      //      return;
-      //  }
+        if (!isValid) {
+            return;
+        }
+
 
         $.ajax({
             type: 'POST',
